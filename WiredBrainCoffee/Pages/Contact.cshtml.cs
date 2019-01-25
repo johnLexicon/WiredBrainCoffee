@@ -27,8 +27,11 @@ namespace WiredBrainCoffee.Pages
 
         public void OnPost()
         {
-            _service.SendEmail(Contact);
-            Message = "Email has been sent!";
+            if (ModelState.IsValid)
+            {
+                _service.SendEmail(Contact);
+                Message = "Email has been sent!";
+            }
         }
 
         private IEmailService _service;
