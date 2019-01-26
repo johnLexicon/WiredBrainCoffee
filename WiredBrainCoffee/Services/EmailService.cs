@@ -9,5 +9,10 @@ namespace WiredBrainCoffee.Services
         {
 
         }
+
+        public void SendEmail(string address)
+        {
+
+        }
     }
 }
